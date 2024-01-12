@@ -26,7 +26,13 @@ mongoose.connection.on("disconnected", () => {
     console.log("mongoDB disconnected!");
   });
 
-app.use(cors());
+app.use(cors(
+    {
+        origin:["booking-chi-one.vercel.app"],
+        methods: ["POST","GET"],
+        credentials:true
+    }
+));
 app.use(cookieParser())
 app.use(express.json())
 
