@@ -4,11 +4,11 @@ import {
   Route,
 } from "react-router-dom";
 
-import Home from "./pages/home/home";
-import List from "./pages/list/List";
-import Hotel from "./pages/hotel/Hotel";
-import Login from "./pages/login/Login";
-import Register from "./pages/register/Register";
+import Home from "./pages/home/home.jsx";
+import List from "./pages/list/List.jsx";
+import Hotel from "./pages/hotel/Hotel.jsx";
+import Login from "./pages/login/Login.jsx";
+import Register from "./pages/register/Register.jsx";
 
 function App() {
   return (
