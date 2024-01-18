@@ -22,7 +22,7 @@ const handleClick = async e =>{
     e.preventDefault()
     dispatch({type:"LOGIN_START"})
     try{
-      const res = await axios.post("https://booking-backend-phi.vercel.app/api/auth/login",credentials)
+      const res = await axios.post("https://booking-server-ppve.onrender.com/api/auth/login",credentials)
       
       dispatch({type:"LOGIN_SUCCESS",payload:res.data.details});
       navigate("/")
