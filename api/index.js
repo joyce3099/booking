@@ -28,7 +28,7 @@ mongoose.connection.on("disconnected", () => {
 
 app.use(cors(
     {
-        origin:["booking-chi-one.vercel.app"],
+        origin:["booking-backend-phi.vercel.app/"],
         methods: ["POST","GET"],
         credentials:true
     }
