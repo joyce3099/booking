@@ -13,6 +13,14 @@ const app = express()
 dotenv.config()
 mongoose.set('strictQuery', false);
 
+app.use(cors(
+    {
+        origin:["booking-frontend-zeta.vercel.app"],
+        methods: ["POST","GET"],
+        credentials:true
+    }
+));
+
 const connect = async () => {
     try {
         await mongoose.connect(process.env.MONGO);
@@ -26,13 +34,6 @@ mongoose.connection.on("disconnected", () => {
     console.log("mongoDB disconnected!");
   });
 
-app.use(cors(
-    {
-        origin:["booking-frontend-zeta.vercel.app/"],
-        methods: ["POST","GET"],
-        credentials:true
-    }
-));
 app.use(cookieParser())
 app.use(express.json())
 
