@@ -13,20 +13,20 @@ const app = express()
 dotenv.config()
 mongoose.set('strictQuery', false);
 
-// app.use((req, res, next) => {
-//     res.header('Access-Control-Allow-Origin', 'https://booking-frontend-zeta.vercel.app');
-//     res.header('Access-Control-Allow-Methods', 'POST, GET');
-//     res.header('Access-Control-Allow-Credentials', 'true');
-//     next();
-// });
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'https://booking-frontend-zeta.vercel.app');
+    res.header('Access-Control-Allow-Methods', 'POST, GET');
+    res.header('Access-Control-Allow-Credentials', 'true');
+    next();
+});
 
-// app.use(cors(
-//     {
-//         origin:["*"],
-//         methods: ["POST","GET"],
-//         credentials:true
-//     }
-// ));
+app.use(cors(
+    {
+        origin:["*"],
+        methods: ["POST","GET"],
+        credentials:true
+    }
+));
 
 const connect = async () => {
     try {
