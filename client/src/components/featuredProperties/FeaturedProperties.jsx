@@ -4,7 +4,7 @@ import useFetch from '../../hooks/useFetch';
 import { Link } from 'react-router-dom';
 
 const FeaturedProperties = () => {
-  const {data,loading,error} = useFetch("https://booking-backend-phi.vercel.app/hotels?featured=true");
+  const {data,loading,error} = useFetch("https://booking-server-ppve.onrender.com/api/hotels?featured=true");
 
   return (
     <div className="fp">
