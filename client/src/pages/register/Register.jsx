@@ -19,7 +19,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:8800/api/auth/register", {
+      const res = await axios.post("https://booking-backend-phi.vercel.app/api/auth/register", {
         username: credentials.username,
         email:credentials.email,
         password: credentials.password,
