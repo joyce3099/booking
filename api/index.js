@@ -15,7 +15,7 @@ mongoose.set('strictQuery', false);
 
 app.use(cors(
     {
-        origin:["booking-frontend-zeta.vercel.app"],
+        origin:["*"],
         methods: ["POST","GET"],
         credentials:true
     }
