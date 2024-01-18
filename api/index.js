@@ -13,13 +13,26 @@ const app = express()
 dotenv.config()
 mongoose.set('strictQuery', false);
 
-app.use(cors(
-    {
-        origin:["*"],
-        methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-        credentials:true
-    }
-));
+app.use(function(req, res, next) {
+      // res.header("Access-Control-Allow-Origin", "*");
+      const allowedOrigins = ['https://booking-server-ppve.onrender.com'];
+      const origin = req.headers.origin;
+      if (allowedOrigins.includes(origin)) {
+           res.setHeader('Access-Control-Allow-Origin', origin);
+      }
+      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+      res.header("Access-Control-Allow-credentials", true);
+      res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, UPDATE");
+      next();
+    });
+
+// app.use(cors(
+//     {
+//         origin:["*"],
+//         methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+//         credentials:true
+//     }
+// ));
 
 const connect = async () => {
     try {
