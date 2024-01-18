@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Featured =() =>{
 
-  const {data,loading,error,reFetch} = useFetch("https://booking-backend-phi.vercel.app/api/hotels/countByCity?cities=berlin,madrid,london");
+  const {data,loading,error,reFetch} = useFetch("https://booking-server-ppve.onrender.com/api/hotels/countByCity?cities=berlin,madrid,london");
   
 
   console.log(data);
