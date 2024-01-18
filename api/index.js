@@ -28,7 +28,7 @@ mongoose.connection.on("disconnected", () => {
 
 app.use(cors(
     {
-        origin:["https://booking-frontend-zeta.vercel.app"],
+        origin:["booking-frontend-zeta.vercel.app/"],
         methods: ["POST","GET"],
         credentials:true
     }
