@@ -25,7 +25,7 @@ const Hotel = () => {
   const [open, setOpen] = useState(false);
   const [openModal,setOpenModal] = useState(false);
 
-  const {data,loading,error} = useFetch(`http://localhost:8800/api/hotels/find/${id}`)
+  const {data,loading,error} = useFetch(`https://booking-backend-phi.vercel.app/api/hotels/find/${id}`)
   const {dates,options} = useContext(SearchContext)
   const {user} = useContext(AuthContext)
   const {navigate} = useNavigate()
