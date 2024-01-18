@@ -28,7 +28,7 @@ mongoose.set('strictQuery', false);
 
 app.use(cors(
     {
-        origin:["https://booking-server-ppve.onrender.com/api/hotels?featured=true"],
+        origin:["https://booking-frontend-zeta.vercel.app"],
         methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
         credentials:true
     }
