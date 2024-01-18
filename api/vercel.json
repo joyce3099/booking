@@ -15,9 +15,5 @@
         "Access-Control-Allow-Origin": "*"
       }
     }
-    {
-      "src": "/(.*)",
-      "dest": "/"
-    }
   ]
 }
